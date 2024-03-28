@@ -21,4 +21,16 @@ public class DialogContent extends ParentPage{
     public WebElement headText;
 
 
+
+    public WebElement getWebElement(String strElement){
+        switch (strElement){
+            case "username": return this.username;
+            case "password": return this.password;
+            case "loginButton": return this.loginButton;
+            case "headText": return this.headText;
+        }
+        return null;
+    }
+
+
 }
