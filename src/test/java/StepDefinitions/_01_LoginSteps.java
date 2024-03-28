@@ -1,11 +1,13 @@
 package StepDefinitions;
 
+import Utilities.GWD;
 import io.cucumber.java.en.*;
 
 public class _01_LoginSteps {
     @Given("Navigate to Campus")
     public void navigate_to_campus() {
         System.out.println("Site açıldı");
+        GWD.getDriver().get("");
 
 
     }
