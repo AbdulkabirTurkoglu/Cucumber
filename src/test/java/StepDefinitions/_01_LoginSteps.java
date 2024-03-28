@@ -4,6 +4,7 @@ import Utilities.GWD;
 import io.cucumber.java.en.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import pages.DialogContent;
 
 import java.time.Duration;
@@ -20,18 +21,19 @@ public class _01_LoginSteps {
         WebDriverWait wait=new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(20));
         wait.until(ExpectedConditions.visibilityOf(dc.username));
 
-
         System.out.println("username ve şifre gönderildi");
         dc.username.sendKeys("turkeyts");
         dc.password.sendKeys("TechnoStudy123");
         dc.loginButton.click();
 
-
-
     }
     @Then("User should login successfully")
     public void user_should_login_successfully() {
         System.out.println("Siteye girildiği kontrol edildi");
+        WebDriverWait wait = new WebDriverWait(GWD.getDriver(),Duration.ofSeconds(20));
+        wait.until(ExpectedConditions.textToBePresentInElement(dc.headText,"Internship"));
+
+     //   Assert.assertTrue(dc.headText,"Internship");
 
 
 
