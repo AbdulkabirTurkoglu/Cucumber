@@ -18,8 +18,8 @@ Feature: Citizenship Functionality
     Then Success message should be displayed
     Examples:
       | name    | shortName |
-      | mehmed1 | vali1      |
-      | mehmed2 | vali2      |
-      | mehmed3 | vali3      |
-      | mehmed4 | vali4      |
-      | mehmed5 | vali5      |
+      | mehmud1 | yali1      |
+      | mehmud2 | yali2      |
+      | mehmud3 | yali3      |
+      | mehmud4 | yali4      |
+      | mehmud5 | yali5      |

@@ -30,6 +30,7 @@ public class LeftNav extends ParentPage{
             case "setup": return this.setup;
             case "parameters":return this.parameters;
             case "countries":return this.countries;
+            case "citizenship":return this.citizenship;
         }
         return null;
     }
