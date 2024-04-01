@@ -63,10 +63,17 @@ public class DialogContent extends ParentPage{
 
     public WebElement getWebElement(String strElement){
         switch (strElement){
-            case "username": return this.username;
-            case "password": return this.password;
-            case "loginButton": return this.loginButton;
-            case "headText": return this.headText;
+            case "addButton" : return this.addButton;
+            case "nameInput" : return this.nameInput;
+            case "codeInput" : return this.codeInput;
+            case "saveButton" : return this.saveButton;
+            case "shortName" : return this.shortName;
+         //   case "integrationCode" : return this.integrationCode;
+         //   case "priorityCode" : return this.priorityCode;
+         //   case "toggleBar" : return this.toggleBar;
+         //   case "userType" : return this.userType;
+         //   case "student" : return this.student;
+         //   case "administrator" : return this.administrator;
         }
         return null;
     }
