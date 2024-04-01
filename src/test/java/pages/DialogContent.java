@@ -18,8 +18,10 @@ public class DialogContent extends ParentPage{
 
     @FindBy(css="button[aria-label='LOGIN']")
     public WebElement loginButton;
+
     @FindBy(css="span[class='mat-mdc-tooltip-trigger logo-text']")
     public WebElement headText;
+
     @FindBy(xpath = "//ms-add-button[contains(@tooltip,'ADD')]//button")
     public WebElement addButton;
 
@@ -34,10 +36,13 @@ public class DialogContent extends ParentPage{
 
     @FindBy(xpath = "//div[contains(text(),'successfully')]")
     public WebElement successMessage;
+
     @FindBy(xpath = "//ms-text-field[@formcontrolname='shortName' ]//input")
     public WebElement shortName;
+
     @FindBy(xpath = "//div[contains(text(),'already')]")
     public WebElement alreadyExist;
+
     @FindBy(xpath = "//ms-text-field//input[@data-placeholder='Name']")
     public WebElement searchInput;
 
@@ -50,7 +55,22 @@ public class DialogContent extends ParentPage{
     @FindBy(xpath = "//button[@type='submit']")
     public WebElement deleteDialogBtn;
 
+    @FindBy(xpath = "//ms-text-field[@formcontrolname='budgetAccountIntegrationCode']//input")
+    public WebElement integrationCode;
 
+    @FindBy(xpath = "//ms-integer-field[@formcontrolname='priority']//input")
+    public WebElement priorityCode;
+
+    @FindBy(xpath = "//mat-slide-toggle[@formcontrolname='active']")
+    public WebElement toggleBar;
+
+    @FindBy(xpath = "//mat-chip-list[@formcontrolname='roles' ]//input")
+    public WebElement userType;
+
+    @FindBy(xpath = "//span[text()=' Student ']")
+    public WebElement student;
+    @FindBy(xpath = "//span[text()=' Administrator ']")
+    public WebElement administrator;
 
     public void deleteItem(String deleteName){
         mySendKeys(searchInput, deleteName);
@@ -60,7 +80,6 @@ public class DialogContent extends ParentPage{
         myClick(deleteDialogBtn);
     }
 
-
     public WebElement getWebElement(String strElement){
         switch (strElement){
             case "addButton" : return this.addButton;
@@ -68,12 +87,12 @@ public class DialogContent extends ParentPage{
             case "codeInput" : return this.codeInput;
             case "saveButton" : return this.saveButton;
             case "shortName" : return this.shortName;
-         //   case "integrationCode" : return this.integrationCode;
-         //   case "priorityCode" : return this.priorityCode;
-         //   case "toggleBar" : return this.toggleBar;
-         //   case "userType" : return this.userType;
-         //   case "student" : return this.student;
-         //   case "administrator" : return this.administrator;
+            case "integrationCode" : return this.integrationCode;
+            case "priorityCode" : return this.priorityCode;
+            case "toggleBar" : return this.toggleBar;
+            case "userType" : return this.userType;
+            case "student" : return this.student;
+            case "administrator" : return this.administrator;
         }
         return null;
     }
