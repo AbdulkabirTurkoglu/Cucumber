@@ -82,9 +82,9 @@ Feature: DataTable Functionality
 
     And User sending the keys in Dialog
       | nameInput       | kimalisi |
-      | codeInput       | 77877 |
-      | integrationCode | 8964    |
-      | priorityCode    | 2225   |
+      | codeInput       | 77877    |
+      | integrationCode | 8964     |
+      | priorityCode    | 2225     |
 
     And Click on the Element in Dialog
       | toggleBar  |
