@@ -96,6 +96,4 @@ public class DialogContent extends ParentPage{
         }
         return null;
     }
-
-
 }
